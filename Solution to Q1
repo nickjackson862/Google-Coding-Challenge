@@ -25,11 +25,11 @@ N = len(array)
 Q = random.randint(1, N)
 
 
-print(N)
+print("N =",N)
 for i in range(N):
     print(array[i], end = " ")
 print()
-print(Q)
+print("Q=",Q)
 
 
 
@@ -41,13 +41,15 @@ for i in array:
             LRArray.append(i)
             LRArray.append(j)
             factorialArray.append(factorialVal-i)
- 
+
+print("Factorial pairs:") 
 iterator = 0            
 while iterator < len(LRArray):
     print(LRArray[iterator], LRArray[iterator+1])
     iterator +=2
 print()
 
+print("Query # minimum factorials:")
 factorialArray.sort()
 if Q < len(factorialArray):
     for i in range(Q):

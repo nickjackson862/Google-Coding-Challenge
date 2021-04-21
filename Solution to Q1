@@ -43,7 +43,7 @@ for i in array:
 print("Factorial pairs:") 
 iterator = 0            
 while iterator < len(LRArray):
-    print(LRArray[iterator], LRArray[iterator+1])
+    print(abs(LRArray[iterator]), abs(LRArray[iterator+1]))
     iterator +=2
 print()
 

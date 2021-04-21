@@ -1,4 +1,3 @@
-  
 import random
 
 #factorial calculator function
@@ -44,6 +43,7 @@ for i in array:
             factorialArray.append(factorialVal-i)
 for i in range(len(LRArray)):
     print(LRArray[i], end = " ")
+    print()
     
 print()
 

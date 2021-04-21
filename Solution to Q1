@@ -11,7 +11,6 @@ def FactorialCalculator(num):
             num = num-1
         return(factorial)
 
-
 #generate array
 array = []
 for i in range (random.randint(1,300)):
@@ -24,14 +23,12 @@ N = len(array)
 #Generate query numbers
 Q = random.randint(1, N)
 
-
+#show N array length, N array values and Q number
 print("N =",N)
 for i in range(N):
     print(array[i], end = " ")
 print()
 print("Q=",Q)
-
-
 
 #check for internal factorials and append to array
 for i in array: 

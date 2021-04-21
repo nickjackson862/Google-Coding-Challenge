@@ -1,0 +1,47 @@
+import random
+
+#factorial calculator function
+def FactorialCalculator(num):
+    if num<=0:
+        print("number must be greater than zero")
+    else:
+        factorial = num
+        while num >1:
+            factorial = factorial * (num-1)
+            num = num-1
+        return(factorial)
+
+
+#generate array
+array = []
+for i in range (random.randint(1,300)):
+    array.append(random.randint(1,300))
+
+#initiate temporary array    
+tempArray = []
+N = len(array)
+#Generate query numbers
+Q = random.randint(N,100000)
+
+
+print(N)
+for i in range(N):
+    print(array[i], end = " ")
+print()
+print(Q)
+
+
+
+#check for internal factorials
+for i in array: 
+    factorialVal = FactorialCalculator(i)
+    for j in array:
+        if factorialVal == j :
+            tempArray.append(factorialVal-i)
+
+for i in range(len(tempArray)):
+    print(tempArray[i], end = " ")
+    
+
+
+

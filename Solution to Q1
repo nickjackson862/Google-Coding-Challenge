@@ -33,7 +33,7 @@ print(Q)
 
 
 
-#check for internal factorials and print
+#check for internal factorials and append to array
 for i in array: 
     factorialVal = FactorialCalculator(i)
     for j in array:
@@ -41,10 +41,11 @@ for i in array:
             LRArray.append(i)
             LRArray.append(j)
             factorialArray.append(factorialVal-i)
-for i in range(len(LRArray)):
-    print(LRArray[i], end = " ")
-    print()
-    
+ 
+iterator = 0            
+while iterator < len(LRArray):
+    print(LRArray[iterator], LRArray[iterator+1])
+    iterator +=2
 print()
 
 factorialArray.sort()

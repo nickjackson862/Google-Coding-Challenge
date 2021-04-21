@@ -1,3 +1,4 @@
+  
 import random
 
 #factorial calculator function
@@ -17,11 +18,12 @@ array = []
 for i in range (random.randint(1,300)):
     array.append(random.randint(1,300))
 
-#initiate temporary array    
-tempArray = []
+#initiate solution arrays    
+factorialArray = []
+LRArray = []
 N = len(array)
 #Generate query numbers
-Q = random.randint(N,100000)
+Q = random.randint(1, N)
 
 
 print(N)
@@ -32,16 +34,23 @@ print(Q)
 
 
 
-#check for internal factorials
+#check for internal factorials and print
 for i in array: 
     factorialVal = FactorialCalculator(i)
     for j in array:
         if factorialVal == j :
-            tempArray.append(factorialVal-i)
-
-for i in range(len(tempArray)):
-    print(tempArray[i], end = " ")
+            LRArray.append(i)
+            LRArray.append(j)
+            factorialArray.append(factorialVal-i)
+for i in range(len(LRArray)):
+    print(LRArray[i], end = " ")
     
+print()
 
-
-
+factorialArray.sort()
+if Q < len(factorialArray):
+    for i in range(Q):
+        print(factorialArray[i], end = " ")
+else:
+    for i in range(len(factorialArray)):
+        print(factorialArray[i], end = " ")
